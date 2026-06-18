@@ -730,120 +730,123 @@
 </section>
 
 <!-- ================================================================
-     КАК ДОБРАТЬСЯ
+     СХЕМА ПРОЕЗДА И ПАРКОВКА
 ================================================================ -->
-<section class="how-to-get-section" id="location" aria-labelledby="how-to-get-heading">
+<section class="location-section" id="location" aria-labelledby="location-heading">
     <div class="container">
-        
         <div class="section-header">
             <div class="section-tag">Как добраться</div>
-            <h2 id="how-to-get-heading">Схема проезда и парковка</h2>
+            <h2 id="location-heading">Схема проезда</h2>
             <p class="section-subtitle">
-                НИУ МИЭТ, г. Зеленоград, площадь Шокина, дом 1
+                НИУ МИЭТ, г. Зеленоград, площадь Шокина, 1
             </p>
         </div>
 
-        <!-- Карта -->
-        <div class="map-wrapper">
-            <div class="map-container">
-                <div class="map-widget" style="position:relative;overflow:hidden;">
+        <div class="location-grid">
+            <!-- Карта с вашим виджетом -->
+            <div class="location-map">
+                <div class="location-map-widget">
                     <a href="https://yandex.ru/maps/org/natsionalny_issledovatelskiy_universitet_moskovskiy_institut_elektronnoy_tekhniki/1042223652/?utm_medium=mapframe&utm_source=maps" 
-                       style="color:#eee;font-size:12px;position:absolute;top:0px;left:8px;z-index:2;text-shadow:0 1px 2px rgba(0,0,0,0.6);text-decoration:none;" 
+                       class="location-map-link" 
                        target="_blank" 
                        rel="noopener noreferrer">
-                        Национальный исследовательский университет МИЭТ
+                        Национальный исследовательский университет Московский институт электронной техники
                     </a>
                     <a href="https://yandex.ru/maps/216/zelenograd/category/university/184106140/?utm_medium=mapframe&utm_source=maps" 
-                       style="color:#eee;font-size:12px;position:absolute;top:16px;left:8px;z-index:2;text-shadow:0 1px 2px rgba(0,0,0,0.6);text-decoration:none;" 
+                       class="location-map-link location-map-link--category" 
                        target="_blank" 
                        rel="noopener noreferrer">
                         ВУЗ в Зеленограде
                     </a>
                     <iframe 
-                        src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=37.210328%2C55.983205&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.67" 
-                        width="100%" 
-                        height="500" 
-                        frameborder="1" 
-                        allowfullscreen="true" 
-                        style="position:relative;border-radius:16px;display:block;"
+                        src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=37.211400%2C55.985052&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.07" 
+                        class="location-map-iframe"
+                        allowfullscreen="true"
                         title="Яндекс.Карта: НИУ МИЭТ, Зеленоград"
                         loading="lazy">
                     </iframe>
                 </div>
-            </div>
-            
-            <a href="https://yandex.ru/maps/216/zelenograd/?from=mapframe&ll=37.210328%2C55.983205&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.67" 
-               class="btn-map-open-link" 
-               target="_blank" 
-               rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-                    <polyline points="15 3 21 3 21 9"/>
-                    <line x1="10" y1="14" x2="21" y2="3"/>
-                </svg>
-                Открыть в Яндекс.Картах
-            </a>
-        </div>
-
-        <!-- Информационные блоки -->
-        <div class="transport-grid">
-            
-            <!-- Как проехать на авто -->
-            <div class="transport-card">
-                <div class="transport-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="1" y="3" width="15" height="13"/>
-                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
-                        <circle cx="5.5" cy="18.5" r="2.5"/>
-                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                <a href="https://yandex.ru/maps/216/zelenograd/?from=mapframe&ll=37.211400%2C55.985052&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.07" 
+                   class="btn btn-map-open" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                        <polyline points="15 3 21 3 21 9"/>
+                        <line x1="10" y1="14" x2="21" y2="3"/>
                     </svg>
-                </div>
-                <h3>На автомобиле</h3>
-                <p>По Ленинградскому шоссе до Зеленограда, далее по Центральному проспекту до площади Шокина.</p>
-                <p class="transport-coords">Координаты: <strong>55.983423, 37.208091</strong></p>
+                    Открыть в Яндекс.Картах
+                </a>
             </div>
 
-            <!-- Как проехать на транспорте -->
-            <div class="transport-card">
-                <div class="transport-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"/>
-                        <path d="M8 2v4"/>
-                        <path d="M16 2v4"/>
-                        <path d="M2 10h20"/>
-                    </svg>
-                </div>
-                <h3>На общественном транспорте</h3>
-                <p>От станции метро «Ховрино» автобусом № 400Э до остановки «МИЭТ».<br>
-                От станции Крюково (МЦД-3) автобусами № 2, 3, 19, 32 до остановки «МИЭТ».</p>
-            </div>
+            <!-- Информация о парковке и проезде -->
+            <div class="location-info">
+                <h3>Как добраться</h3>
 
-            <!-- Парковка -->
-            <div class="transport-card transport-card--parking">
-                <div class="transport-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-                        <path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>
-                    </svg>
-                </div>
-                <h3>Парковка</h3>
-                
-                <div class="parking-options">
-                    <div class="parking-option-item">
-                        <strong>Парковка №1 (основная)</strong>
-                        <p>Бесплатная парковка на территории кампуса МИЭТ. Въезд с площади Шокина через главный КПП. <em>150 машиномест.</em></p>
+                <div class="location-info-block">
+                    <div class="location-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/>
+                            <circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
                     </div>
-                    <div class="parking-option-item">
-                        <strong>Парковка №2 (дополнительная)</strong>
-                        <p>Открытая стоянка напротив главного корпуса со стороны Георгиевского проспекта. <em>200 машиномест.</em></p>
+                    <div>
+                        <strong>На автомобиле</strong>
+                        <p>
+                            По Ленинградскому шоссе до Зеленограда, далее по Центральному проспекту
+                            до площади Шокина. Координаты для навигатора:
+                            <strong>55.983423, 37.208091</strong>.
+                        </p>
                     </div>
                 </div>
-                
-                <p class="parking-note-text">* Просим прибывать заранее — в день мероприятия ожидается большое количество участников.</p>
+
+                <div class="location-info-block">
+                    <div class="location-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"/>
+                            <path d="M8 2v4"/>
+                            <path d="M16 2v4"/>
+                            <path d="M2 10h20"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <strong>На общественном транспорте</strong>
+                        <p>
+                            От станции метро «Ховрино» автобусом № 400Э до остановки «МИЭТ».
+                            От станции Крюково (МЦД-3) автобусами № 2, 3, 19, 32 до остановки «МИЭТ».
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Парковка -->
+                <div class="parking-info">
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                            <path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>
+                        </svg>
+                        Парковка
+                    </h3>
+
+                    <div class="parking-options">
+                        <div class="parking-option">
+                            <strong>Парковка №1 (основная)</strong>
+                            <p>Бесплатная парковка на территории кампуса МИЭТ. Въезд с площади Шокина через главный КПП. 150 машиномест.</p>
+                        </div>
+                        <div class="parking-option">
+                            <strong>Парковка №2 (дополнительная)</strong>
+                            <p>Открытая стоянка напротив главного корпуса со стороны Георгиевского проспекта. 200 машиномест.</p>
+                        </div>
+                    </div>
+
+                    <p class="parking-note">
+                        * Просим прибывать заранее — в день мероприятия ожидается большое количество участников.
+                    </p>
+                </div>
             </div>
-
         </div>
-
     </div>
 </section>
 <!-- ================================================================
