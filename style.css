@@ -2840,6 +2840,58 @@ footer {
     }
 }
 
+/* Адаптивность */
+@media (max-width: 900px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .location-map {
+        order: -1;
+    }
+
+    .location-map-iframe {
+        height: 350px;
+    }
+    
+    .location-map-link {
+        font-size: 11px;
+        padding: 3px 6px;
+    }
+    
+    .location-map-link--category {
+        top: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .location-section {
+        padding: 60px 0;
+    }
+
+    .location-map-iframe {
+        height: 280px;
+    }
+
+    .location-info-block {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .parking-info {
+        padding: 16px;
+    }
+    
+    .btn-map-open {
+        width: 100%;
+        justify-content: center;
+        font-size: 13px;
+        padding: 12px 20px;
+    }
+}
+
 /* Анимация */
 .animate-target {
     opacity: 0;
