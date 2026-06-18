@@ -743,17 +743,40 @@
         </div>
 
         <div class="location-grid">
-            <!-- Карта -->
+            <!-- Карта с вашим виджетом -->
             <div class="location-map">
-                <iframe
-                    src="<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/natsionalny_issledovatelskiy_universitet_moskovskiy_institut_elektronnoy_tekhniki/1042223652/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Национальный исследовательский университет Московский институт электронной техники</a><a href="https://yandex.ru/maps/216/zelenograd/category/university/184106140/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">ВУЗ в Зеленограде</a><iframe src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=37.211400%2C55.985052&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.07" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>"
-                    width="100%"
-                    height="450"
-                    frameborder="0"
-                    allowfullscreen="true"
-                    title="Карта: НИУ МИЭТ, Зеленоград"
-                    loading="lazy">
-                </iframe>
+                <div class="location-map-widget">
+                    <a href="https://yandex.ru/maps/org/natsionalny_issledovatelskiy_universitet_moskovskiy_institut_elektronnoy_tekhniki/1042223652/?utm_medium=mapframe&utm_source=maps" 
+                       class="location-map-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Национальный исследовательский университет Московский институт электронной техники
+                    </a>
+                    <a href="https://yandex.ru/maps/216/zelenograd/category/university/184106140/?utm_medium=mapframe&utm_source=maps" 
+                       class="location-map-link location-map-link--category" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        ВУЗ в Зеленограде
+                    </a>
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=37.211400%2C55.985052&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.07" 
+                        class="location-map-iframe"
+                        allowfullscreen="true"
+                        title="Яндекс.Карта: НИУ МИЭТ, Зеленоград"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <a href="https://yandex.ru/maps/216/zelenograd/?from=mapframe&ll=37.211400%2C55.985052&mode=poi&poi%5Bpoint%5D=37.208091%2C55.983423&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D1042223652&z=15.07" 
+                   class="btn btn-map-open" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                        <polyline points="15 3 21 3 21 9"/>
+                        <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                    Открыть в Яндекс.Картах
+                </a>
             </div>
 
             <!-- Информация о парковке и проезде -->
@@ -774,7 +797,7 @@
                         <p>
                             По Ленинградскому шоссе до Зеленограда, далее по Центральному проспекту
                             до площади Шокина. Координаты для навигатора:
-                            <strong>55.983684, 37.205313</strong>.
+                            <strong>55.983423, 37.208091</strong>.
                         </p>
                     </div>
                 </div>
