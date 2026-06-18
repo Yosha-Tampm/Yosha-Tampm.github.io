@@ -2559,233 +2559,187 @@ footer {
 }
 
 /* ================================================================
-   СХЕМА ПРОЕЗДА И ПАРКОВКА
+   КАК ДОБРАТЬСЯ
 ================================================================ */
-.location-section {
+.how-to-get-section {
     padding: 90px 0;
-    background: #f8fafc;
+    background: var(--white);
 }
 
-.location-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 50px;
-    align-items: start;
+/* Обёртка карты */
+.map-wrapper {
+    margin-bottom: 60px;
 }
 
-/* Карта */
-.location-map {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.location-map-widget {
-    position: relative;
-    overflow: hidden;
+.map-container {
     border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
     background: #e2e8f0;
 }
 
-/* Ссылки поверх карты */
-.location-map-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    color: #eee;
-    font-size: 12px;
-    line-height: 1.4;
-    padding: 4px 8px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
-    max-width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.map-widget {
+    line-height: 0;
 }
 
-.location-map-link:hover {
-    color: #ffffff;
-    text-decoration: underline;
+.map-widget iframe {
+    border-radius: 16px;
 }
 
-.location-map-link--category {
-    top: 18px;
-}
-
-/* Iframe карты */
-.location-map-iframe {
-    position: relative;
-    width: 100%;
-    height: 450px;
-    border: none;
-    display: block;
-}
-
-/* Кнопка открытия в Яндекс.Картах */
-.btn-map-open {
+/* Кнопка открытия карты */
+.btn-map-open-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    align-self: flex-start;
-    padding: 10px 20px;
-    background: #ffffff;
-    color: #3b82f6;
-    border: 1px solid #3b82f6;
+    padding: 12px 24px;
+    background: var(--white);
+    color: var(--blue);
+    border: 1px solid var(--blue);
     border-radius: 8px;
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all var(--transition);
 }
 
-.btn-map-open:hover {
-    background: #3b82f6;
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+.btn-map-open-link:hover {
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(15, 69, 199, 0.3);
 }
 
-.btn-map-open svg {
+.btn-map-open-link svg {
     width: 16px;
     height: 16px;
 }
 
-/* Информация о проезде */
-.location-info h3 {
-    font-size: 22px;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid #e2e8f0;
+/* Сетка с информацией */
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
 }
 
-.location-info-block {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 24px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.transport-card {
+    background: var(--white);
+    border: 1px solid var(--gray);
+    border-radius: 16px;
+    padding: 28px 24px;
+    transition: all var(--transition);
 }
 
-.location-info-block:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+.transport-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
 }
 
-.location-icon {
-    flex-shrink: 0;
+.transport-card--parking {
+    border-color: var(--blue-light);
+    background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+}
+
+.transport-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    background: var(--blue-light);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    margin-bottom: 20px;
+    color: var(--blue);
 }
 
-.location-icon svg {
+.transport-icon svg {
     width: 24px;
     height: 24px;
 }
 
-.location-info-block strong {
-    display: block;
-    font-size: 16px;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 6px;
+.transport-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 12px;
 }
 
-.location-info-block p {
+.transport-card p {
     font-size: 14px;
-    color: #64748b;
+    color: var(--text-light);
     line-height: 1.7;
-    margin: 0;
+    margin-bottom: 8px;
 }
 
-.location-info-block p strong {
+.transport-coords {
+    font-size: 13px !important;
+    color: var(--text-light);
+    margin-top: 12px !important;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray);
+}
+
+.transport-coords strong {
     display: inline;
-    font-size: 14px;
-    color: #1e293b;
-    background: #f1f5f9;
-    padding: 2px 8px;
+    background: var(--light-gray);
+    padding: 3px 8px;
     border-radius: 4px;
+    font-weight: 600;
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
 }
 
 /* Парковка */
-.parking-info {
-    margin-top: 32px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 24px;
-}
-
-.parking-info h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 20px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid #e2e8f0;
-}
-
-.parking-info h3 svg {
-    width: 28px;
-    height: 28px;
-    color: #3b82f6;
-}
-
 .parking-options {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    margin-bottom: 16px;
 }
 
-.parking-option {
-    padding: 16px;
-    background: #f8fafc;
+.parking-option-item {
+    padding: 14px;
+    background: var(--light-gray);
     border-radius: 10px;
-    border-left: 3px solid #3b82f6;
-    transition: background 0.3s ease;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--blue);
+    transition: background var(--transition);
 }
 
-.parking-option:hover {
-    background: #eff6ff;
+.parking-option-item:last-child {
+    margin-bottom: 0;
 }
 
-.parking-option strong {
+.parking-option-item:hover {
+    background: var(--blue-light);
+}
+
+.parking-option-item strong {
     display: block;
     font-size: 15px;
     font-weight: 600;
-    color: #1e293b;
+    color: var(--text);
     margin-bottom: 4px;
 }
 
-.parking-option p {
-    font-size: 14px;
-    color: #64748b;
-    line-height: 1.6;
+.parking-option-item p {
+    font-size: 13px;
+    color: var(--text-light);
     margin: 0;
+    line-height: 1.5;
 }
 
-.parking-note {
+.parking-option-item p em {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.parking-note-text {
     margin-top: 16px;
-    font-size: 13px;
-    color: #94a3b8;
+    font-size: 12px;
+    color: var(--text-light);
     font-style: italic;
+    border: none !important;
+    padding: 0 !important;
 }
 
 /* Адаптивность */
